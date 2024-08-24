@@ -11,6 +11,16 @@ FROM bicycle
 GROUP BY modeltype 
 ORDER BY Sales DESC; # Filtered results by total sales from highest to lowest 
 
+/* This query displays number of occurances for each 
+modeltype in the bicycles table, which resembles sales to determine the bike type with
+most orders */
+
+Select
+modeltype,
+COUNT(modeltype) as Qty
+FROM bicycle 
+GROUP BY modeltype ;
+
 /* This query reveals the top 5 states with the highest sales revenue */
 
 SELECT 
